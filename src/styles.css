@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+#head {
+  background: black;
+  height: 50px;
+  width: 50px;
+  background-color: green;
+  position: absolute;
+}
+
+#board {
+  height: 700px;
+  width: 700px;
+  border: 1px black solid;
+  position: relative;
+}
+
+#apple {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
