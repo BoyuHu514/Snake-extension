@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const head = new Head(board);
   new Apple(board);
 
+  setInterval(() => {
+    new Apple(board);
+  }, 2000);
+
   body.addEventListener('keydown', (e) => {
     if (e.code === 'ArrowLeft') {
       console.log('pressed left');

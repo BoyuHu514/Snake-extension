@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+html, body {
+  width: 800px;
+  height:800px; 
+  overflow: visible;
+  justify-content: center; 
+  align-items: center;
+}
+
 body {
   height: 100vh;
   display: grid;

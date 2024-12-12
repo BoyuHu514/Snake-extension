@@ -19,6 +19,12 @@ class Head {
     setTimeout(this.boundMove, this.SPEED);
   }
 
+  resetGame() {
+    this.node.style.top = '0px';
+    this.node.style.left = '0px';
+    this.currentDirection = 'right';
+  }
+
   move() {
     const head = this.node;
     const direction = this.currentDirection;
@@ -46,6 +52,8 @@ class Head {
       topPosition < 0
     ) {
       alert('Game Over');
+      this.resetGame();
+            
     }
 
     // if (this.leftPosition === apple.leftPosition) {
@@ -61,15 +69,19 @@ class Head {
     const head = this.node;
     let left = this.node.style.left
     let top = head.style.top
-    const apple = document.querySelector('#apple')
+    const apples = document.querySelector('.apple')
     // let appleleft = apple.style.left
     // let appletop = apple.style.top
-    if (left === apple.style.left && top === apple.style.top)  {
-        alert('hit');
+    apples.forEach((apple) => {
+      if (apple.style.left === headLeft && apple.style.top === headTop) {
+        alert('hit!');
+        head.resetGame();
+      }
+    });
         //new Apple(board); this will also run the randomApple function
       }       
       }
 
 
 
-}
+
